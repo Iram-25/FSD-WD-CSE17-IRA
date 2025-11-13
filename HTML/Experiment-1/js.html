@@ -13,7 +13,11 @@
         function val() {
             var name = document.getElementById("name").value.trim();
             var password = document.getElementById("pswrd").value.trim();
+            var email = document.getElementById("em").value.trim();
+            var phone = document.getElementById("phno").value.trim();
             var namePattern = /^[A-Za-z]+$/;
+            var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
+            var phonePattern = /^[0-9]{10}$/;
             if (name.length < 6 || !namePattern.test(name)) {
                 alert("Name should contain only alphabets and be at least 6 characters long."); document.getElementById("name").focus();
                 return false;
@@ -23,9 +27,18 @@
                 document.getElementById("pswrd").focus();
                 return false;
             }
-            return true;
-        }
-    </script>
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid Email ID (e.g. name@domain.com).");
+                document.getElementById("em").focus();
+                return false;
+            }
+            if (!phonePattern.test(phone)) {
+                18
+                alert("Phone Number should contain exactly 10 digits.");
+                document.getElementById("phno").focus();
+                return false;
+            } return true;
+        }</script>
     <table border="1" width="800" height="200">
         <tr style="background-color:#d92641;">
             <th><img src="./image.png" height="50"></th>
@@ -43,10 +56,13 @@
             <td colspan="4" rowspan="4" style="text-align:center;">
                 <h2><u>Register</u></h2>
                 <form onsubmit=" return val()" action="Home.html" align="center">
-                    <table>Name:<input id=name type="text" name="name" placeholder="Enter Name" minlength="6" pattern="[A-Za-z]+" title="Name should contain only alphabets and be at least 6 characters long." required><br><br>Password:<input id=pswrd type="password" name="password" placeholder="Enter Password" minlength="6" title="Name should contain only alphabets and be at least 6 characters long." required><br><br>Email:
-                        <input id=em type="email" name="email" placeholder="Enter Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br><br>
-                        Phone-Number:<input id=phno type="tel" name="phone" placeholder="Enter Phone Number" pattern="[0-9]{10}" title="Should contain only Number & 10 characters long." required><br><br>Sex:<input id=m type="radio" name="sex" value="male" required>Male<input id=f type="radio" name="sex" value="female" required>Female<br><br>Date of Birth:<input id=date type="text" name="dob" style="width:30px" placeholder="Date" equired><span></span><input id=mnthtype="text" name="dob" style="width:50px" placeholder="Month" required><span></span><input id=yr type="text" name="dob" style="width:40px" placeholder="Year" required><br><br>
-                        Language known:<input id=eng type="checkbox" name="language" value="english">English<input id=hin type="checkbox" name="language" value="hindi">Hindi<input id=ta type="checkbox" name="language" value="Tamil">Tamil<input id=tl type="checkbox" name="language" value="Telgu">Telgu<br><br>Address:<br> <textarea id=adr name="address" placeholder="Enter Address" required></textarea><br><br>
+                    <table>Name:<input id=name type="text" name="name" placeholder="Enter Name" minlength="6" pattern="[A-Za-z]+" title="Name should contain only alphabets and be at least 6 characters long." required><br><br>Password:<input id=pswrd type="password" name="password" placeholder="Enter Password" minlength="6" title="Name should contain only alphabets and be at least 6 characters long." required><br><br>
+                            Email:<input id=em type="email" name="email" placeholder="Enter Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br><br>
+                            Phone-Number:<input id=phno type="tel" name="phone" placeholder="Enter Phone Number" pattern="[0-9]{10}" title="Should contain only Number & 10 characters long." required><br><br>
+                            Sex:<input id=m type="radio" name="sex" value="male" required>Male<input id=f type="radio" name="sex" value="female" required>Female<br><br>
+                            Date of Birth:<input id=date type="text" name="dob" style="width:30px" placeholder="Date" required><span></span><input id=mnth type="text" name="dob" style="width:50px" placeholder="Month" required><span></span><input id=yr type="text" name="dob" style="width:40px" placeholder="Year" required><br><br>
+                            Language known: <input id=eng type="checkbox" name="language" value="english">English<input id=hin type="checkbox" name="language" value="hindi">Hindi<input id=ta type="checkbox" name="language" 19 value="Tamil">Tamil<input id=tl type="checkbox" name="language" value="Telgu">Telgu<br><br>
+                            Address:<br><textarea id=adr name="address" placeholder="Enter Address" required></textarea><br><br>
                         <input id=sm type="submit" value="Submit"><br>
                         <br>
                     </table>
@@ -64,5 +80,4 @@
         </tr>
     </table>
 </body>
-
-</html>
+</htm
