@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Selectors</title>
+  <link rel="icon" type="image/x-icon"
+    href=".\image.png">
+
+  <style>
+    h1 {
+      color: rgb(46, 16, 16);
+      font-family: 'Georgia', serif;
+      text-align: center;
+    }
+    .info {
+      font-size: 18px;
+      color: #f46068;
+      background-color: #440707;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    #i_d {
+      font-style: italic;
+      color: #e5ebe5;
+      background-color: #f1559b;
+      padding: 10px;
+      border-left: 5px solid rgb(255, 255, 255);
+    }
+    body {
+      background-image: url('https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0f/54/4a/c9.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS Page</h1>
+  <p class="info">
+    This paragraph uses the <strong>.info</strong> class style.  
+    The class selector is defined in the CSS and applied here by using the <code>class="info"</code> attribute.
+  </p>
+  <p id="i_d">
+    This paragraph uses the <strong>#special</strong> ID style.  
+    The ID selector is defined in the CSS and applied here by using the <code>id="special"</code> attribute.
+  </p>
+</body>
+</html>
